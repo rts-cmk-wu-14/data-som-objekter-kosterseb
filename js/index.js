@@ -76,9 +76,29 @@ function handleAdvantages() {
 const advantagesSection = document.querySelector(".advantages");
 advantagesSection.innerHTML = advantages.map(advantage => `
     <div class="advantage">
-      <img src="${advantage.icon}" alt="${advantage.headline}">`)
+      <img src="${advantage.icon}" alt="${advantage.headline}">
+      <h3>${advantage.headline}</h3>
+      <p>${advantage.text}</p>`)
+        
+
 }
 
-function handleFooter() {}
+function handleFooter() {
+const footerSection = document.querySelector(".footer");
+footerSection.innerHTML = `
+    <div class="footer-content">
+      <p>${footer.brand}</p>
+      <h2>${footer.headline}</h2>
+      <div class="social-icons">
+        ${footer.functions.map(functions => `
+            <p>${functions.links}</p>
+          <a href="${footer.links}">
+            <img src="${footer.icon}" alt="Social icon">
+          </a>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
 //eksempel på at udskrive alle overskrifter i services i konsollen:
 // services.forEach(service => console.log(service.headline))
