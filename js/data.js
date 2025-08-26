@@ -103,42 +103,41 @@ let footer = {
     headline: "When Passion Meets Comfort",
     functions: [
         {
-            title: "Discover the Network",
-            links:
-            {
-                link1: "Where to shop",
-                link2: "Tour Guided",
-                link3: "Our Tours",
-                link4: "About Us"
-            },
-
-            title: "Become a Manager",
-            links:
-            {
-                link1: "Join your Pairing",
-                link2: "Offer your Service",
-                link3: "Are you a guide?",
-            },
-
-            title: "Assistance",
-            links:
-            {
-                link1: "Support Center",
-                link2: "FAQs",
-                link3: "Cancellation Options",
-                link4: "Reliability and Security"
-            }
+          title: "Discover the Network",
+          links: {
+            link1: "Where to shop",
+            link2: "Tour Guided",
+            link3: "Our Tours",
+            link4: "About Us"
+          }
+        },
+        {
+          title: "Become a Manager",
+          links: {
+            link1: "Join your Pairing",
+            link2: "Offer your Service",
+            link3: "Are you a guide?",
+          }
+        },
+        {
+          title: "Assistance",
+          links: {
+            link1: "Support Center",
+            link2: "FAQs",
+            link3: "Cancellation Options",
+            link4: "Reliability and Security"
+          }
         }
-    ],
+      ],
 
     copyright: "EasyCamper. All Rights Reserved",
     quickLinks: [
-        {
-            link1: "About",
-            link2: "Site Map",
-            link3: "Terms",
-            link4: "Privacy Policy",
-            link5: "Teams"
-        }
+        
+            "About",
+            "Site Map",
+            "Terms",
+            "Privacy Policy",
+            "Teams"
+        
     ]
 }

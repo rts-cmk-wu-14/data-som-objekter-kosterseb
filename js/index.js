@@ -28,9 +28,10 @@ function handleServices() {
 const servicesSection = document.querySelector(".services");
 servicesSection.innerHTML = services.map(service => `
     <div class="service">
-      <img src="${service.img}" alt="${service.name}">
+      <img src="${service.illustration}" alt="${service.name}">
       <h3>${service.headline}</h3>
       <p>${service.text}</p>
+      <a href="#">${service.linktext}</a>
     </div>
   `).join('');
 }
@@ -84,21 +85,40 @@ advantagesSection.innerHTML = advantages.map(advantage => `
 }
 
 function handleFooter() {
-const footerSection = document.querySelector(".footer");
-footerSection.innerHTML = `
-    <div class="footer-content">
+    const footerSection = document.querySelector(".footer");
+    footerSection.innerHTML = 
+`
+      <div class="footer-content">
       <p>${footer.brand}</p>
       <h2>${footer.headline}</h2>
-      <div class="social-icons">
-        ${footer.functions.map(functions => `
-            <p>${functions.links}</p>
-          <a href="${footer.links}">
-            <img src="${footer.icon}" alt="Social icon">
-          </a>
+      <div class="footer-links">
+        ${footer.functions.map(section => `
+          <div class="footer-column">
+            <h3>${section.title}</h3>
+            <ul>
+              ${Object.values(section.links).map(link => `
+                <li><a href="#">${link}</a></li>
+              `).join('')}
+            </ul>
+          </div>
         `).join('')}
       </div>
+
+      <p class="copyright">${footer.copyright}</p>
+      
+      <div class="footer-quicklinks">
+        <h3>Quick Links</h3>
+        <ul>
+          ${footer.quickLinks.map(link => `
+            <li><a href="#">${link}</a></li>
+          `).join('')}
+        </ul>
+      </div>
+
     </div>
   `;
 }
+
+console.log(footer);
 //eksempel på at udskrive alle overskrifter i services i konsollen:
 // services.forEach(service => console.log(service.headline))
