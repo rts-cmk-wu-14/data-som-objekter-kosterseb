@@ -11,22 +11,30 @@ handleAdvantages();
 handleFooter();
 
 function handleHero() {
-const heroSection = document.querySelector(".hero");
-heroSection.innerHTML = `
+  const heroSection = document.querySelector(".hero");
+  const highlightedHeadline = hero.headline.replace(
+    "save your time",
+    `<span class="highlight">${"save your time"}</span>`
+  );
+
+  heroSection.innerHTML = `
 <div class="hero-content">
 <img src="${hero.image}" alt="Hero image">
       <div class="hero-text">
-        <h1>${hero.headline}</h1>
+        <h1>${highlightedHeadline}</h1>
         <p>${hero.copy}</p>
+        </div>
+        <div class="hero-icon">
         <img src="${hero.icon}" alt="icon">
-      </div>
+        <p>Explore</p>
+        </div>
     </div>
   `;
 }
 
 function handleServices() {
-const servicesSection = document.querySelector(".services");
-servicesSection.innerHTML = services.map(service => `
+  const servicesSection = document.querySelector(".services");
+  servicesSection.innerHTML = services.map(service => `
     <div class="service">
       <img src="${service.illustration}" alt="${service.name}">
       <h3>${service.headline}</h3>
@@ -37,8 +45,8 @@ servicesSection.innerHTML = services.map(service => `
 }
 
 function handleFacilities() {
-const facilitiesSection = document.querySelector(".facilities");
-facilitiesSection.innerHTML = `
+  const facilitiesSection = document.querySelector(".facilities");
+  facilitiesSection.innerHTML = `
     <h2>${facilities.headline}</h2>
     <div class="facility-options">
       ${facilities.options.map(option => `
@@ -53,8 +61,8 @@ facilitiesSection.innerHTML = `
 }
 
 function handleSites() {
-const sitesSection = document.querySelector(".sites");
-sitesSection.innerHTML = `
+  const sitesSection = document.querySelector(".sites");
+  sitesSection.innerHTML = `
     <h2>${sites.headline}</h2>
     <p>${sites.text}</p>
     <div class="site-places">
@@ -74,20 +82,20 @@ sitesSection.innerHTML = `
 }
 
 function handleAdvantages() {
-const advantagesSection = document.querySelector(".advantages");
-advantagesSection.innerHTML = advantages.map(advantage => `
+  const advantagesSection = document.querySelector(".advantages");
+  advantagesSection.innerHTML = advantages.map(advantage => `
     <div class="advantage">
       <img src="${advantage.icon}" alt="${advantage.headline}">
       <h3>${advantage.headline}</h3>
       <p>${advantage.text}</p>`)
-        
+
 
 }
 
 function handleFooter() {
-    const footerSection = document.querySelector(".footer");
-    footerSection.innerHTML = 
-`
+  const footerSection = document.querySelector(".footer");
+  footerSection.innerHTML =
+    `
       <div class="footer-content">
       <p>${footer.brand}</p>
       <h2>${footer.headline}</h2>
@@ -107,7 +115,6 @@ function handleFooter() {
       <p class="copyright">${footer.copyright}</p>
       
       <div class="footer-quicklinks">
-        <h3>Quick Links</h3>
         <ul>
           ${footer.quickLinks.map(link => `
             <li><a href="#">${link}</a></li>
