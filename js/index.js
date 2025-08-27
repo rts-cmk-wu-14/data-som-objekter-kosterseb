@@ -64,33 +64,38 @@ function handleFacilities() {
 function handleSites() {
   const sitesSection = document.querySelector(".sites");
   sitesSection.innerHTML = `
+  <div class="sites-left">
     <h2>${sites.headline}</h2>
     <p>${sites.text}</p>
+    <button><img src="${sites.btnicon}">Start</button>
+    </div>
     <div class="site-places">
       ${sites.places.map(place => `
         <div class="site-place">
           <img src="${place.img}" alt="${place.name}">
           <h3>${place.name}</h3>
           <p>${place.city}</p>
+          <a href="#">View the site</a>
         </div>
       `).join('')}
     </div>
-    <button class="site-btn">
-      Explore all sites
-      <img src="${sites.btnicon}" alt="arrow icon">
-    </button>
   `;
 }
 
 function handleAdvantages() {
   const advantagesSection = document.querySelector(".advantages");
-  advantagesSection.innerHTML = advantages.map(advantage => `
-    <div class="advantage">
+  advantagesSection.innerHTML = `
+  <h2 class="advantages-headline">Our Advantages</h2>
+  <div class="advantage">
+  ${advantages.map(advantage => `
+    <div class="advantage-items">
       <img src="${advantage.icon}" alt="${advantage.headline}">
-      <h3>${advantage.headline}</h3>
-      <p>${advantage.text}</p>`)
-
-
+        <h3>${advantage.headline}</h3>
+        <p>${advantage.text}</p>
+    </div>
+      `).join('')}
+      </div>
+      `;
 }
 
 function handleFooter() {
@@ -113,14 +118,16 @@ function handleFooter() {
         `).join('')}
       </div>
 
-      <p class="copyright">${footer.copyright}</p>
+      <div class="footer-bottom">
+        <p class="copyright">${footer.copyright}</p>
       
-      <div class="footer-quicklinks">
-        <ul>
+        <div class="footer-quicklinks">
+          <ul>
           ${footer.quickLinks.map(link => `
             <li><a href="#">${link}</a></li>
-          `).join('')}
-        </ul>
+            `).join('')}
+            </ul>
+        </div>
       </div>
 
     </div>
