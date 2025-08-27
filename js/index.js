@@ -47,13 +47,14 @@ function handleServices() {
 function handleFacilities() {
   const facilitiesSection = document.querySelector(".facilities");
   facilitiesSection.innerHTML = `
-    <h2>${facilities.headline}</h2>
+    <h2 class="facility-headline">${facilities.headline}</h2>
     <div class="facility-options">
       ${facilities.options.map(option => `
         <div class="facility-option">
           <img src="${option.icon}" alt="${option.headline}">
           <h3>${option.headline}</h3>
           <p>${option.text}</p>
+          <a href="#">Show me more</a>
         </div>
       `).join('')}
     </div>

@@ -135,3 +135,62 @@
     text-decoration: underline;
 }
 
+.facility-headline {
+    width: 700px;
+    font-size: 2rem;
+    margin-left: 100px;
+    font-weight: 500;
+    color: #333;
+}
+
+.facility-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    margin: 100px 100px 200px 100px;
+    max-width: 1600px;
+}
+
+.facility-option {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    text-align: start;
+}
+
+.facility-option img {
+    width: 30px;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.facility-option h3 {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.facility-option p {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 0.8rem;
+    color: #666666c0;
+    width: 250px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+
+    margin-bottom: 15px;
+}
+
+.facility-option a {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 600;
+    align-self: end;
+    display: inline-block;
+    color: rgba(255, 99, 71, 0.803);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.facility-option a:hover {
+    text-decoration: underline;
+}
