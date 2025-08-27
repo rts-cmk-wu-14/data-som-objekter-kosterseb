@@ -102,31 +102,31 @@ function handleFooter() {
   const footerSection = document.querySelector(".footer");
   footerSection.innerHTML =
     `
-      <div class="footer-content">
+      <div class="footer-headline">
       <p>${footer.brand}</p>
-      <h2>${footer.headline}</h2>
-      <div class="footer-links">
+      <h2>${footer.headline}.</h2>
+
+      <div class="footer-column">
         ${footer.functions.map(section => `
-          <div class="footer-column">
             <h3>${section.title}</h3>
             <ul>
               ${Object.values(section.links).map(link => `
                 <li><a href="#">${link}</a></li>
               `).join('')}
             </ul>
-          </div>
         `).join('')}
       </div>
 
+      <span class="footer-line"></span>
+
       <div class="footer-bottom">
         <p class="copyright">${footer.copyright}</p>
-      
         <div class="footer-quicklinks">
           <ul>
           ${footer.quickLinks.map(link => `
             <li><a href="#">${link}</a></li>
             `).join('')}
-            </ul>
+          </ul>
         </div>
       </div>
 
